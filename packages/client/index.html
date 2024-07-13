@@ -7,7 +7,27 @@
   </head>
   <body>
     <script type="module" src="/src/index.ts"></script>
-    <div>Counter: <span id="counter">0</span></div>
-    <button id="incrementButton">Increment</button>
+    <h3>1. Compiler</h3>
+    <textarea rows="12" id="codeCompile" type="textarea"></textarea>
+    <button id="compileButton">Compile</button>
+    <h3>2. Deployer</h3>
+    <span>Code:</span>
+    <input id="codeDeploy" type="text">
+    <button id="deployButton">Deploy</button>
+    <h3>3. Low level calls</h3>
+    <span>Contract ID:</span>
+    <input id="contractIdExecute" type="text">
+    <input id="functionIdExecute" type="text">
+    <input id="paramsExecute" type="text">
+    <button id="executeButton">Execute</button>
+    <h3>4. Application level calls</h3>
+    <span>Transfer:</span>
+    <input id="toTransfer" type="text">
+    <input id="amountTranfer" type="text">
+    <button id="transferButton">Transfer</button>
+    <span>Get Balance:</span>
+    <input id="accountApp" type="text">
+    <button id="getBalanceButton">Get Balance</button>
+    <span>Account balance:</span>
   </body>
 </html>

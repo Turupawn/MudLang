@@ -45,7 +45,19 @@ export function createSystemCalls(
     return getComponentValue(Counter, singletonEntity);
   };
 
+  const deployContract = async (code: any) => {
+    const tx = await worldContract.write.app__deployContract([code]);
+    await waitForTransaction(tx);
+    return getComponentValue(Counter, singletonEntity);
+  };
+
+  const executeFunction = async (contractId: number, functionId: number, params: any) => {
+    const tx = await worldContract.write.app__executeFunction([contractId, functionId, params]);
+    await waitForTransaction(tx);
+    return getComponentValue(Counter, singletonEntity);
+  };
+
   return {
-    increment,
+    increment, deployContract, executeFunction
   };
 }

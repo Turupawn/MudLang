@@ -1,5 +1,6 @@
 ## Opcodes
 
+```
 0x10 Push0
 0x11 Push1
 0x12 Push2
@@ -9,9 +10,11 @@
 0x21 SlotRead(SlotPos) returns(SlotValue)
 0x22 Keccack256(A, B) returns(HashedValue)
 0x23 SlotWrite(SlotPos, NewValue)
+```
 
 ## Token
 
+```
 transfer(To, Amount)
 11 Push1
 20 ParamRead
@@ -31,6 +34,7 @@ getBalance(Account)
 0x1010202200000000000000000000000000000000000000000000000000000000
 
 [0x1120101020222300000000000000000000000000000000000000000000000000,0x1010202200000000000000000000000000000000000000000000000000000000]
+```
 
 ## Call transfer (To, Amount)
 
